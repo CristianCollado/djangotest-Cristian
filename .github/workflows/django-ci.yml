@@ -9,11 +9,13 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #${{matrix.os}}
     strategy:
-      max-parallel: 4 # Will run a maximum of four jobs at a time
+      max-parallel: 4 # Will run a maximum of four (jobs?) at a time
       matrix:
         python-version: [3.7, 3.8, 3.9]
+      #matrix:
+      # os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
     - uses: actions/checkout@v3 # actions/checkout is the official GitHub repository with yamls for use
