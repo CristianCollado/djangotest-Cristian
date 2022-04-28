@@ -32,7 +32,8 @@ jobs:
         
     - name: Run Tests
       run: |
-        python manage.py test
+        python chapptest/manage.py test
+        #python manage.py test
 
     - name: Build Docker Image and push it to the repository
       uses: mr-smithers-excellent/docker-build-push@v5
