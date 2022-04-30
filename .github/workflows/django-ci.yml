@@ -35,10 +35,12 @@ jobs:
         python chapptest/manage.py test
         #python manage.py test
         
-    - name: Build Docker Image and push it to the repository
-      uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: cristiancollado/mirepositorio # docker ID / repository
-        registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+# Step innecesario, no se generará una imagen de docker que se subirá a mi repositorio en cada commit
+
+#    - name: Build Docker Image and push it to the repository
+#      uses: mr-smithers-excellent/docker-build-push@v5
+#      with:
+#        image: cristiancollado/mirepositorio # docker ID / repository
+#        registry: docker.io
+#        username: ${{ secrets.DOCKER_USERNAME }}
+#        password: ${{ secrets.DOCKER_PASSWORD }}
